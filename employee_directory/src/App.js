@@ -6,7 +6,7 @@ import Table from "./components/Table";
 function App() {
   return (
     <Wrapper>
-      <Title>Friends List</Title>
+      <Title>Parks Directory</Title>
       <Table/>
     </Wrapper>
   );
