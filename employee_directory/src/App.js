@@ -1,13 +1,14 @@
 import React from "react";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
-import Table from "./components/Table";
+import TableOfPeople from "./components/Table";
+import employees from "./employee.json"
 
 function App() {
   return (
     <Wrapper>
       <Title>Parks Directory</Title>
-      <Table/>
+      <TableOfPeople />
     </Wrapper>
   );
 }
