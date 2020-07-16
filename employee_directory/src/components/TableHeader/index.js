@@ -10,7 +10,7 @@ function TableHeader() {
         <Table striped bordered hover variant="dark">
             <thead>
                 <tr>
-                    <th>Image</th>
+                    <th>Picture</th>
                     <th>Name</th>
                     <th>Phone Number</th>
                     <th>Email</th>

@@ -1,3 +1,14 @@
 thead{
-    text-align: center
+    text-align: center;
+    table-layout: fixed;
+}
+thead th {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background: #343B3F;
+    z-index: 10;
+}
+Table {
+    max-width: 80%;
 }
