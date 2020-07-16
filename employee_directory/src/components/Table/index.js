@@ -1,15 +1,23 @@
 import React from "react";
 import "./style.css";
-// import Table from 'react-bootstrap/Table'
-import employees from "../../employee.json"
+import Table from 'react-bootstrap/Table'
 
-function TableOfPeople() {
+function TableOfPeople(props) {
   return (
     // need to map to employee.json 
     // follow activity 12 for props example may not be able to map this way. also see activity 13
-      <ul>
-        {employees.map(items => (<li key={items.id}>{items.name}</li>))}
-      </ul>
+    <tbody>
+      <tr>
+        <td>
+          <img alt={props.name} src={props.image}/>
+        </td>
+        <td>{props.name}</td>
+        <td>{props.phone}</td>
+        <td>{props.email}</td>
+        <td>{props.dob}</td>
+      </tr>
+    </tbody>
+
   );
 }
 
