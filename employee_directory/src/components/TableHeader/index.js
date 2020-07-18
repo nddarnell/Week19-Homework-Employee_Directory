@@ -13,23 +13,29 @@ class TableHeader extends Component {
         this.state = {
             search: "",
             result: [],
-            default: []
+            default: [],
+            name: ""
         }
     };
 
     componentDidMount() {
         this.setState({ result: employees, default: employees })
+        console.log(this.state)
     };
 
     handleInputChange = event =>{
+        event.preventDefault()
         const {name, value} = event.target;
 
         this.setState({
             [name]: value
         });
-        const filter = this.state.default.filter(employee =>{
-            return(employee.name)
+        console.log(this.state)
+
+        const filter = this.state.default.filter(employees =>{
+            return(employees.name)
         });
+
         this.setState({results: filter})
     }
 
