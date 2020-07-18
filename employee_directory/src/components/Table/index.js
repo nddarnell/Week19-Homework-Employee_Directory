@@ -3,8 +3,6 @@ import "./style.css";
 
 function TableOfPeople(props) {
   return (
-    // need to map to employee.json 
-    // follow activity 12 for props example may not be able to map this way. also see activity 13
     <tbody>
       <tr>
         <td>
