@@ -7,7 +7,32 @@ import "./style.css"
 
 
 class TableHeader extends Component {
-    
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            search: "",
+            result: [],
+            default: []
+        }
+    };
+
+    componentDidMount() {
+        this.setState({ result: employees, default: employees })
+    };
+
+    handleInputChange = event =>{
+        const {name, value} = event.target;
+
+        this.setState({
+            [name]: value
+        });
+        const filter = this.state.default.filter(employee =>{
+            return(employee.name)
+        });
+        this.setState({results: filter})
+    }
+
     render() {
         return (
             <>

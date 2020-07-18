@@ -10,7 +10,7 @@ const SearchBar = ({search, handleInputChange})=>{
                 <Form.Control 
                     type="text" 
                     name="search" 
-                    value={search} 
+                    value={search}
                     onChange={handleInputChange} 
                     placeholder="Search Directory!">
                 </Form.Control>
