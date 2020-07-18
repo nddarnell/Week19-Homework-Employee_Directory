@@ -32,8 +32,6 @@ class TableHeader extends Component {
         });
         console.log(this.state)
 
-        // const result = words.filter(word => word.length > 6);
-
         const filter = this.state.default.filter(employees => {
 
             // console.log(employees.name.includes(this.state.name))
@@ -44,6 +42,23 @@ class TableHeader extends Component {
         console.log(this.state.result)
     }
 
+    onToggleClick = () => {
+        console.log("hi")
+        if (this.state.sort === "descend") {
+            let ascending = this.state.result.sort((a, b) =>
+                a.name > b.name ? 1 : -1
+            )
+            this.setState({ result: ascending, sort: "ascend" })
+        } else {
+            let descending = this.state.result.sort((a, b) =>
+                a.name < b.name ? 1 : -1
+            )
+            this.setState({ result: descending, sort: "descend" })
+        }
+    }
+
+
+
     render() {
         return (
             <>
@@ -53,7 +68,7 @@ class TableHeader extends Component {
                     <thead>
                         <tr>
                             <th>Picture</th>
-                            <th>Name</th>
+                            <th onClick={() => { this.onToggleClick() }}>Name<span className="dropdown-toggle"></span></th>
                             <th>Phone Number</th>
                             <th>Email</th>
                             <th>Date of Birth</th>
