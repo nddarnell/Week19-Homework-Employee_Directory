@@ -1,5 +1,8 @@
 # React Employee Directory
-        
+
+## Deployed Link
+
+https://nddarnell.github.io/Week19-Homework-Employee_Directory/
         
 ## Description
         
